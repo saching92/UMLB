@@ -25,14 +25,6 @@ from sklearn.metrics import accuracy_score
 #### your code goes here
 
 
-clf = tree.DecisionTreeClassifier(min_samples_split=50)
-clf.fit(features_train, labels_train)   
-pred = clf.predict(features_test)
-
-acc_min_samples_split_50 = accuracy_score(pred, labels_test)
-### be sure to compute the accuracy on the test set
-print acc_min_samples_split_50
-
 clf = tree.DecisionTreeClassifier(min_samples_split=2)
 clf.fit(features_train, labels_train)   
 pred = clf.predict(features_test)
@@ -40,6 +32,14 @@ pred = clf.predict(features_test)
 acc_min_samples_split_2 = accuracy_score(pred, labels_test)
 ### be sure to compute the accuracy on the test set
 print acc_min_samples_split_2
+
+clf = tree.DecisionTreeClassifier(min_samples_split=50)
+clf.fit(features_train, labels_train)   
+pred = clf.predict(features_test)
+
+acc_min_samples_split_50 = accuracy_score(pred, labels_test)
+### be sure to compute the accuracy on the test set
+print acc_min_samples_split_50
 
 
 
